@@ -18,10 +18,8 @@ function LunchCheckController($scope) {
       case (dishCount > 3):
         $scope.message = "Too much!";
         break;
-      case (dishCount == ""):
-        $scope.message = 'Please enter data first';
-        break;
       default:
+        $scope.message = 'Please enter data first';
     }
   }
 };
