@@ -11,16 +11,14 @@ function LunchCheckController($scope) {
 
   $scope.checkLunch = function () {
     var dishCount = $scope.dishes.split(',');
-    switch (true) {
-      case (dishCount >= 1 && dishCount <= 3):
-        $scope.message = "Enjoy!";
-        break;
-      case (dishCount > 3):
-        $scope.message = "Too much!";
-        break;
-      default:
-        $scope.message = 'Please enter data first';
-    }
+    var dishh = dishCount.length;
+
+    if (dishCount[0] == "")
+      $scope.message = "Please enter data first";
+    else if (dishh <= 3)
+      $scope.message = "Enjoy!";
+    else
+      $scope.message = 'Too much!';
   }
 };
 
