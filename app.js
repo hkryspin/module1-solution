@@ -10,12 +10,12 @@ function LunchCheckController($scope) {
   $scope.dishes = "";
 
   $scope.checkLunch = function () {
-    var dishCount = $scope.dishes.split(',');
-    var dishh = dishCount.length;
+    var lunchBox = $scope.dishes.split(',');
+    var dishCount = dishCount.length;
 
-    if (dishCount[0] == "")
+    if (lunchBox[0] == "")
       $scope.message = "Please enter data first";
-    else if (dishh <= 3)
+    else if (dishCount <= 3)
       $scope.message = "Enjoy!";
     else
       $scope.message = 'Too much!';
